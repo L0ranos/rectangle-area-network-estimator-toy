@@ -27,7 +27,7 @@ square_area = x_lengths*y_lengths
 Training_data = np.vstack((x_lengths,y_lengths)).T
 print(np.shape(Training_data))
 
-X_train, X_test, y_train, y_test = train_test_split(Training_data, square_area, train_size=0.9)
+X_train, X_test, y_train, y_test = train_test_split(Training_data, square_area, train_size=0.9, random_state=random_state)
 
 #Definiujemy sieć neuronową
 model = keras.Sequential([
