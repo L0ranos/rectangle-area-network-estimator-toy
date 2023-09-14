@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 #wybieramy stan losowy układu dla powtarzalności
-random_state = 42
+random_state = 2137
 np.random.seed = random_state
 
 
@@ -48,11 +48,11 @@ history = model.fit(
     X_train, y_train,
     validation_split=0.1,
     batch_size=10,
-    epochs=12,
+    epochs=2,
 )
 
 #Zapiszmy model testowy
-model.save("trained_model_live")
+model.save("Rectangle_area_network/trained_model_live")
 
 #sprawdźmy na zbiorze testowym
 preds = model.predict(X_test)
@@ -68,4 +68,4 @@ plt.xlabel("Epoka szkolenia")
 plt.ylabel("Średni błąd bezwzględny")
 plt.legend(["Strata treningu", "Strata walidacji"])
 plt.grid(True, "major")
-plt.savefig("result_test_live.png")
+plt.savefig("Rectangle_area_network/result_test_live.png")

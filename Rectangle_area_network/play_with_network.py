@@ -1,6 +1,6 @@
 from tensorflow import keras
 
-model = keras.models.load_model("trained_model")
+model = keras.models.load_model("Rectangle_area_network/trained_model")
 
 invalue_x = 0
 invalue_y = 0
